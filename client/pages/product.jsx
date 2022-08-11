@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import ProductDetails from '../components/productDetails';
+import ProductFooter from '../components/productFooter';
+import Nav from '../components/nav';
 import { getProducts } from '../lib/productService';
 import styles from '../styles/product.module.css';
 
@@ -32,12 +34,8 @@ export default function Product({ productData }) {
 
 	return (
 		<main className={styles.container}>
-			<div>
-				Basket Items::
-				<span className={styles.qty} title='Basket items'>
-					{basketItems}
-				</span>
-			</div>
+			<Nav basketItems={basketItems} />
+
 			<article className={styles.productContainer}>
 				<div>
 					<Image
@@ -45,6 +43,7 @@ export default function Product({ productData }) {
 						height={400}
 						width={500}
 						alt='Energy Saving Bulb'
+						priority
 						className={styles.borderCircle}
 					/>
 					<h1 className={styles.productHeading}>{product.name}</h1>
@@ -75,6 +74,8 @@ export default function Product({ productData }) {
 				</div>
 				<ProductDetails product={product} />
 			</article>
+
+			<ProductFooter />
 		</main>
 	);
 }
