@@ -18,6 +18,7 @@
 .specRow {
 	flex: 1;
 	justify-content: left;
+	width: calc(50% -25px);
 }
 
 .qtyContainer {

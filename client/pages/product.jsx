@@ -9,7 +9,6 @@ import styles from '../styles/product.module.css';
 export async function getStaticProps() {
 	const { data: products } = await getProducts();
 	const [productData] = products.data.allProducts;
-
 	return {
 		props: { productData },
 	};
