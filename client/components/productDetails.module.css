@@ -1,0 +1,27 @@
+.descContainer {
+	background-color: var(--darkBlue);
+	padding: 10px 0 10px 14px;
+}
+
+.specContainer {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 16px;
+}
+
+.specRow {
+	flex: 1;
+	justify-content: left;
+}
+
+.qtyContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.qtyRow {
+	flex: 1;
+	display: flex;
+	justify-content: right;
+}

@@ -6,6 +6,7 @@
 	--purpleHaze: #a49fc8;
 	--siphon: #100030;
 	--sohoLights: #f050f8;
+	--darkBlue: #180048;
 }
 
 html,
@@ -14,6 +15,8 @@ body {
 	margin: 0;
 	font-family: Gotham, helvetica, arial, sans-serif;
 	color: var(--ice);
+	font-size: 18px;
+	line-height: 1.5;
 }
 
 body {
@@ -36,4 +39,16 @@ img {
 	justify-content: center;
 	height: 100vh;
 	margin: 0 auto;
+}
+
+button {
+	background-color: var(--sohoLights);
+	border-radius: 12px;
+	border: 1px solid var(--sohoLights);
+	padding: 10px 14px;
+	width: 100%;
+	display: block;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 20px;
 }
