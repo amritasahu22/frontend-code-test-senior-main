@@ -1,0 +1,18 @@
+.container {
+	max-width: 30rem;
+	padding: 0 1rem;
+	margin: 3rem auto 6rem;
+}
+
+.productContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: center; */
+	height: 100vh;
+	margin: 0 auto;
+}
+
+.borderCircle {
+	border-radius: 5%;
+}
