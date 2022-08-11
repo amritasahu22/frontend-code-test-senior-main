@@ -1,8 +1,29 @@
 import { render, fireEvent } from '@testing-library/react';
 import Product from '../pages/product';
 
+const mockProductData = {
+	fields: {
+		id: 1,
+		name: 'Energy saving light bulb',
+		power: '25W',
+		description: 'Available in 7 watts, 9 watts..',
+		price: 1299,
+		quantity: 4,
+		brand: 'Philips',
+		weight: 77,
+		height: 12.6,
+		width: 6.2,
+		length: 6.2,
+		model_code: 'E27 ES',
+		colour: 'Cool daylight',
+		img_url: 'https://i.ibb.co/2nzwxnQ/bulb.png',
+	},
+};
+
 test('should be able to increase and decrease product quantity', async () => {
-	const { getByText, getByTitle } = render(<Product />);
+	const { getByText, getByTitle } = render(
+		<Product productData={mockProductData} />
+	);
 
 	const increaseQuantity = getByText('+');
 
@@ -19,7 +40,9 @@ test('should be able to increase and decrease product quantity', async () => {
 });
 
 test('should be able to add items to the basket', async () => {
-	const { getByText, getByTitle } = render(<Product />);
+	const { getByText, getByTitle } = render(
+		<Product productData={mockProductData} />
+	);
 
 	const increaseQuantity = getByText('+');
 

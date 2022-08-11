@@ -16,6 +16,7 @@ export async function getStaticProps() {
 export default function Product({ productData }) {
 	const { fields: product } = productData;
 	const [quantity, setQuantity] = useState(1);
+	const [basketItems, setBasketItems] = useState(0);
 
 	const handleQtyDecrement = () => {
 		setQuantity(quantity - 1);
@@ -25,9 +26,18 @@ export default function Product({ productData }) {
 		setQuantity(quantity + 1);
 	};
 
+	const handleAddToCart = () => {
+		setBasketItems(quantity);
+	};
+
 	return (
 		<main className={styles.container}>
-			<div>Product Header</div>
+			<div>
+				Basket Items::
+				<span className={styles.qty} title='Basket items'>
+					{basketItems}
+				</span>
+			</div>
 			<article className={styles.productContainer}>
 				<div>
 					<Image
@@ -50,16 +60,18 @@ export default function Product({ productData }) {
 									onClick={handleQtyDecrement}
 									disabled={quantity === 1 ? true : undefined}
 								>
-									+
+									-
 								</button>
 								<span className={styles.qty} title='Current quantity'>
 									{quantity}
 								</span>
-								<button onClick={handleQtyIncrement}>-</button>
+								<button onClick={handleQtyIncrement}>+</button>
 							</div>
 						</div>
 					</div>
-					<button className={styles.addToCartBtn}>Add to cart</button>
+					<button className={styles.addToCartBtn} onClick={handleAddToCart}>
+						Add to cart
+					</button>
 				</div>
 				<ProductDetails product={product} />
 			</article>
