@@ -54,3 +54,8 @@
 	line-height: 1.5;
 	font-weight: lighter;
 }
+
+.qty {
+	padding: 0 10px;
+	font-size: 24px;
+}

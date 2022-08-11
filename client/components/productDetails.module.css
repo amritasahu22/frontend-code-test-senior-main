@@ -1,12 +1,18 @@
 .descContainer {
 	background-color: var(--darkBlue);
-	padding: 10px 0 10px 14px;
+	padding: 4px 0;
+}
+.descText {
+	padding: 0 8px 0 0;
+	font-size: 16px;
+	letter-spacing: 0.5px;
 }
 
 .specContainer {
 	display: flex;
 	flex-direction: row;
 	margin-bottom: 16px;
+	font-size: 16px;
 }
 
 .specRow {

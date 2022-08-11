@@ -5,7 +5,7 @@ export default function ProductDetails({ product }) {
 		<div>
 			<div className={styles.descContainer}>
 				<h2>Description</h2>
-				<p>{product.description}</p>
+				<p className={styles.descText}>{product.description}</p>
 			</div>
 			<div>
 				<h2>Specification</h2>

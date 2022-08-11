@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import ProductDetails from '../components/productDetails';
 import { getProducts } from '../lib/productService';
@@ -14,6 +15,15 @@ export async function getStaticProps() {
 
 export default function Product({ productData }) {
 	const { fields: product } = productData;
+	const [quantity, setQuantity] = useState(1);
+
+	const handleQtyDecrement = () => {
+		setQuantity(quantity - 1);
+	};
+
+	const handleQtyIncrement = () => {
+		setQuantity(quantity + 1);
+	};
 
 	return (
 		<main className={styles.container}>
@@ -36,9 +46,16 @@ export default function Product({ productData }) {
 						<div>
 							<p className={styles.qtyLabel}>Qty</p>
 							<div className={styles.qtyRow}>
-								<button>+</button>
-								<span>{1}</span>
-								<button>-</button>
+								<button
+									onClick={handleQtyDecrement}
+									disabled={quantity === 1 ? true : undefined}
+								>
+									+
+								</button>
+								<span className={styles.qty} title='Current quantity'>
+									{quantity}
+								</span>
+								<button onClick={handleQtyIncrement}>-</button>
 							</div>
 						</div>
 					</div>
