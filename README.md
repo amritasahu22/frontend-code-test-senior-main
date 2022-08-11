@@ -64,6 +64,30 @@ We would like you to demonstrate your ability to:
 - Write Typescript typings for the components you create, and also the typings for the GraphQL API response
 
 Notes:
+
 - This has not been set up with and type of CSS-in-JS, but if that is something you would like to add, please feel free.
 
 Best of luck!
+
+# Product-Content
+
+I have replaced Typescript with JSX due to limited time and less familiarity with typescript classes of NextJS.
+
+# Improvements:
+
+- Product can be further broken down into modular components - ProductInfo, QtyComponent and so on
+- Props-types checking can be added to components to prevent type errors
+- ProductService code can be improved
+- Test Coverage & Styling can be improved
+- CSS-in-JS like Styled components or CSS Utility frameworks like tailwind can be added
+- Accessibility can be added with ARIA properties
+- Axios can be replaced with Apollo or any other GraphQl clients
+- Typescript can be introduced as it provides typing checking and compile type errors
+
+# HTTP Service:
+
+Library used - axios
+
+- productService - This service is used to get all products.
+- httpService - generic error handling logic for API failures.
+- logService - purpose is logging and can be intergrated with logging service in future.
