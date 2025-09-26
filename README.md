@@ -1,11 +1,14 @@
 # Octo Energy
+This application is a simple e-commerce application where users can view a product catalogue, see product details, add products to the cart, wiew and manage their cart and proceed to the checkout page.
+This project is a simple React app built with Next.js and TypeScript, consume a mock GraphQL API, and pass the included front-end tests.
 
-This project is a simple React app built with Next.js and TypeScript, consume a mock GraphQL API, and pass the included front-end tests. The app is responsive and uses Bootstrap and Sass for styling.
+## Deployed on Vercel
+URL: https://octo-demo.vercel.app/
 
 ## Features
-- Product catalogue and details pages
+- Responsive product catalogue and details pages
 - Cart functionality with quantity controls
-- Responsive design matching the provided assets and colors
+- Checkout page for reviewing cart items
 - TypeScript typings for components and API responses
 - Basic test coverage for product and cart interactions
 
